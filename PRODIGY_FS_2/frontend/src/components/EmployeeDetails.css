@@ -1,0 +1,97 @@
+.employee-details-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.employee-details-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.employee-details-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.employee-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.employee-profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f7f6f6ef;
+}
+
+.employee-name {
+  margin-top: 12px;
+  font-size: 26px;
+  color: #333;
+}
+
+.info-group {
+  margin-top: 20px;
+}
+
+.info-group p {
+  margin: 10px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #444;
+}
+
+.info-group p strong {
+  font-weight: 600;
+  color: #222;
+}
+
+.btn-group {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b92b36;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 20px;
+  color: #555;
+}
