@@ -18,8 +18,8 @@ const MONGO_URL = process.env.MONGO_URL;
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
-      "https://prodigy-info-tech-p9ld.vercel.app"
+      "http://localhost:5173", // local dev (Vite)
+      "https://prodigy-info-tech-p9ld.vercel.app" // deployed frontend
     ],
     credentials: true
   })
@@ -28,20 +28,21 @@ app.use(
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 
-// MongoDB Connection
+// MongoDB connection
 mongoose
-  .connect(MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+  .connect(MONGO_URL)
+  .then(() => {
+    console.log("✅ Connected to MongoDB Atlas");
   })
-  .then(() => console.log("✅ Connected to MongoDB"))
-  .catch((err) => console.error("❌ MongoDB connection error:", err));
+  .catch((error) => {
+    console.error("❌ MongoDB connection failed:", error.message);
+  });
 
 // Routes
-app.use("/auth", authRoutes);
+app.use("/auth", authRoutes);            // /auth/signup, /auth/login
 app.use("/api/employees", employeeRoutes);
 
-// Root route
+// Health check
 app.get("/", (req, res) => {
   res.send("👋 Welcome to the Employee Management API");
 });
