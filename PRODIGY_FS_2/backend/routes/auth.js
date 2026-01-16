@@ -2,7 +2,7 @@
 import express from "express";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
-import User from "../models/User.js";
+import User from "../models/user.js";
 import Employee from "../models/EmployeeInfo.js"; // 🔥 IMPORT EMPLOYEE MODEL
 
 dotenv.config();
