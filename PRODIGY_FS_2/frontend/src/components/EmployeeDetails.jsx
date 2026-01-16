@@ -17,7 +17,7 @@ function EmployeeDetails() {
   useEffect(() => {
     const fetchEmployee = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/employees/${id}`);
+        const res = await axios.get(`https://prodigy-info-tech-3.onrender.com/api/employees/${id}`);
         setEmp(res.data);
       } catch (err) {
         console.error("Error fetching employee", err);
@@ -35,7 +35,7 @@ function EmployeeDetails() {
     if (!confirm) return;
 
     try {
-      await axios.delete(`http://localhost:8080/api/employees/${id}`);
+      await axios.delete(`https://prodigy-info-tech-3.onrender.com/api/employees/${id}`);
       alert("Employee deleted successfully!");
       navigate("/employee");
     } catch (err) {
