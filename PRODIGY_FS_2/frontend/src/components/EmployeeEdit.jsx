@@ -33,7 +33,7 @@ function EditEmployee() {
   const [preview, setPreview] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/api/employees/${id}`).then((res) => {
+    axios.get(`https://prodigy-info-tech-3.onrender.com/api/employees/${id}`).then((res) => {
       setForm(res.data);
       setPreview(res.data.profileImage);
     });
