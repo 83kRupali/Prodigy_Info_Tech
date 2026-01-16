@@ -1,7 +1,7 @@
 
 // routes/employees.js
 import express from "express";
-import Employee from "../models/employeeInfo.js";
+import Employee from "../models/EmployeeInfo.js";
 
 const router = express.Router();
 
