@@ -37,7 +37,7 @@ function EmployeeDetails() {
     try {
       await axios.delete(`http://localhost:8080/api/employees/${id}`);
       alert("Employee deleted successfully!");
-      navigate("/");
+      navigate("/employee");
     } catch (err) {
       console.error("Delete failed", err);
     }
