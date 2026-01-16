@@ -16,7 +16,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8080/auth/login", formData);
+      const res = await axios.post("https://prodigy-info-tech-3.onrender.com/auth/login", formData);
       saveAuth(res.data.token);
       navigate("/employee");
     } catch (err) {
