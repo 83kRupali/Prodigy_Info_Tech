@@ -11,7 +11,7 @@ function EmployeeList() {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/employees");
+        const res = await axios.get("https://prodigy-info-tech-3.onrender.com/api/employees");
         console.log("Fetched employees:", res.data);
         setEmployees(res.data);
       } catch (err) {
