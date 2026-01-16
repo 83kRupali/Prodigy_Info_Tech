@@ -75,7 +75,7 @@ function EmployeeCreate() {
     }
 
     try {
-      await axios.post("http://localhost:8080/api/employees", data, {
+      await axios.post("https://prodigy-info-tech-3.onrender.com/api/employees", data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("Employee created successfully!");
